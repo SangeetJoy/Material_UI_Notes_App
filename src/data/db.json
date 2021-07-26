@@ -1,0 +1,58 @@
+{
+  "notes": [
+    {
+      "title": "Buy Fridge",
+      "details": "Take Mom to the shop and make bajaj finance card",
+      "category": "todos",
+      "id": 1
+    },
+    {
+      "title": "Put all papers in the bike",
+      "details": "make xerox of the leftover documents and put it on the bike",
+      "category": "todos",
+      "id": 2
+    },
+    {
+      "title": "Deposit Money",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including v",
+      "category": "money",
+      "id": 3
+    },
+    {
+      "title": "Complete the training videos",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including vis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "category": "work",
+      "id": 4
+    },
+    {
+      "title": "Wake up early",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "category": "reminders",
+      "id": 5
+    },
+    {
+      "title": "Take your girlfriend out for lunch",
+      "details": "call epare bangla and book a table and make a final date for lunch as it has been pending for a long time now",
+      "category": "todos",
+      "id": 6
+    },
+    {
+      "title": "Withdraw money",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "category": "money",
+      "id": 7
+    },
+    {
+      "title": "Eat juice ",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "category": "reminders",
+      "id": 8
+    },
+    {
+      "title": "Revoke the the leave request",
+      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "category": "work",
+      "id": 9
+    }
+  ]
+}
