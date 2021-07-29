@@ -11,6 +11,8 @@ You'll also need to install Material UI as a dependency. To do this run **npm in
 * react
 * react masonry css
 * date fns
+* framer motion
+* json server
 
 **App screenshot **
 
