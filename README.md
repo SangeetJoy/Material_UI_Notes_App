@@ -14,7 +14,7 @@ You'll also need to install Material UI as a dependency. To do this run **npm in
 * framer motion
 * json server
 
-**App screenshot **
+**App screenshot**
 
 ![image](https://user-images.githubusercontent.com/46918492/127044954-997ef757-889e-4bf9-8a65-f82af6030b52.png)
 
