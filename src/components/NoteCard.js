@@ -14,6 +14,7 @@ import { green, pink, yellow, blue } from "@material-ui/core/colors";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CancelIcon from '@material-ui/icons/Cancel';
+import { motion } from "framer-motion"
 
 const useStyles = makeStyles({
     avatar: {
@@ -92,7 +93,12 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
         setEditedNotes("")
     }
     return (
-        <div>
+        <motion.div
+            animate={note.category === "work" && {
+                rotate: [0, 3, -3, 3, -3, 3, -3, 3, -3, 0]
+            }}
+            transition={{ delay: 1.5, ease: "easeOut", duration: 3.5 }}
+        >
             <Card elevation={3}>
                 <CardHeader
                     avatar={
@@ -145,6 +151,6 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
                         </CardContent>
                 }
             </Card>
-        </div>
+        </motion.div>
     )
 }

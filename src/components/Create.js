@@ -11,6 +11,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import { useHistory } from 'react-router';
+import { motion } from "framer-motion"
 
 const useStyles = makeStyles({
   field: {
@@ -54,6 +55,10 @@ export default function Create() {
   return (
     <Container>
       <Typography
+        component={motion.div}
+        initial={{ y: -200 }}
+        animate={{ y: -10 }}
+        transition={{ ease: "easeIn", type: "spring"}}
         variant="h6"
         color="textSecondary"
         gutterBottom
@@ -69,6 +74,10 @@ export default function Create() {
           fullWidth
           required
           error={titleError}
+          component={motion.div}
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeIn", type: "spring", stiffness: 100 }}
         />
         <TextField
           className={classes.field}
@@ -80,8 +89,18 @@ export default function Create() {
           multiline
           rows={4}
           error={detailsError}
+          component={motion.div}
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeIn", type: "spring", stiffness: 90 }}
         />
-        <FormControl className={classes.field}>
+        <FormControl
+          className={classes.field}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeIn", type: "spring", stiffness: 11 }}
+          component={motion.div}
+        >
           <FormLabel>Note Category</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
             <FormControlLabel value="money" control={<Radio color="primary" />} label="Money" />
@@ -97,6 +116,10 @@ export default function Create() {
           variant="contained"
           color="primary"
           endIcon={<ArrowForwardIosIcon />}
+          initial={{ y: 130 }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeIn", type: "spring", stiffness: 120 }}
+          component={motion.div}
         >
           Submit
         </Button>
