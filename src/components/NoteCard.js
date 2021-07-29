@@ -97,7 +97,7 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
             animate={note.category === "work" && {
                 rotate: [0, 3, -3, 3, -3, 3, -3, 3, -3, 0]
             }}
-            transition={{ delay: 1.5, ease: "easeOut", duration: 3.5 }}
+            transition={{ delay: 1.5, ease: "easeOut", duration: 3.9 }}
         >
             <Card elevation={3}>
                 <CardHeader
