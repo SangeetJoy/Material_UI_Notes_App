@@ -45,7 +45,7 @@ export default function Create() {
     if (title && details) {
       fetch('http://localhost:8000/notes', {
         method: 'POST',
-        headers: {"Content-type": "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify({ title, details, category })
       }).then(() => history.push('/'))
     }
