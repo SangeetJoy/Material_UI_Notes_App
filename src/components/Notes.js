@@ -1,15 +1,13 @@
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import React, { useEffect, useState } from 'react'
 import NoteCard from './NoteCard';
 import Masonry from 'react-masonry-css';
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
-import { borderRadius } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
   myMasonryGrid: {
@@ -44,6 +42,7 @@ export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [deleteId, setDeleteId] = useState("");
+
   const classes = useStyles()
 
   useEffect(() => {
@@ -64,7 +63,6 @@ export default function Notes() {
   }
 
   const handleDelete = async () => {
-
     await fetch('http://localhost:8000/notes/' + deleteId, {
       method: "DELETE"
     })
@@ -92,7 +90,7 @@ export default function Notes() {
       >
         <Fade in={isModalOpen}>
           <div className={classes.paper}>
-            <Typography variant="h6" style={{marginTop: "12px"}}>It will be permanently deleted</Typography>
+            <Typography variant="h6" style={{ marginTop: "12px" }}>It will be permanently deleted</Typography>
             <Button
               variant="contained"
               color="secondary"
@@ -111,7 +109,10 @@ export default function Notes() {
       >
         {notes.map(note => (
           <div key={note.id} style={{ marginBottom: "30px" }}>
-            <NoteCard note={note} onDeleteButtonClick={onDeleteButtonClick} />
+            <NoteCard
+              note={note}
+              onDeleteButtonClick={onDeleteButtonClick}
+            />
           </div>
         ))}
       </Masonry>
