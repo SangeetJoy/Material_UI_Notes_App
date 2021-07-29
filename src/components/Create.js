@@ -58,7 +58,7 @@ export default function Create() {
         component={motion.div}
         initial={{ y: -200 }}
         animate={{ y: -10 }}
-        transition={{ ease: "easeIn", type: "spring"}}
+        transition={{ ease: "easeIn", type: "spring" }}
         variant="h6"
         color="textSecondary"
         gutterBottom
@@ -109,20 +109,22 @@ export default function Create() {
             <FormControlLabel value="work" control={<Radio color="primary" />} label="Work" />
           </RadioGroup>
         </FormControl>
-
-        <Button
-          className={classes.btn}
-          type="submit"
-          variant="contained"
-          color="primary"
-          endIcon={<ArrowForwardIosIcon />}
+        <motion.div
           initial={{ y: 130 }}
           animate={{ y: 0 }}
           transition={{ ease: "easeIn", type: "spring", stiffness: 120 }}
           component={motion.div}
         >
-          Submit
-        </Button>
+          <Button
+            className={classes.btn}
+            type="submit"
+            variant="contained"
+            color="primary"
+            endIcon={<ArrowForwardIosIcon />}
+          >
+            Submit
+          </Button>
+        </motion.div>
       </form>
     </Container>
   )

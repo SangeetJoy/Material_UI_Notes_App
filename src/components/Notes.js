@@ -8,6 +8,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 const useStyles = makeStyles((theme) => ({
   myMasonryGrid: {
@@ -34,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   deleteBtn: {
     marginTop: "15px"
+  },
+  progressBar: {
+    marginBottom: "15px"
   }
 }))
 
@@ -42,13 +46,22 @@ export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [deleteId, setDeleteId] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const classes = useStyles()
 
   useEffect(() => {
+    setIsLoading(true)
     fetch('http://localhost:8000/notes')
       .then(res => res.json())
-      .then(data => setNotes(data))
+      .then(data => {
+        setNotes(data)
+        setIsLoading(false)
+      })
+      .catch(err => {
+        console.log(err);
+        setIsLoading(true)
+      })
   }, [])
 
   const handleClose = () => {
@@ -102,6 +115,7 @@ export default function Notes() {
           </div>
         </Fade>
       </Modal >
+      {isLoading && <LinearProgress className={classes.progressBar} /> }
       <Masonry
         breakpointCols={3}
         className={classes.myMasonryGrid}
