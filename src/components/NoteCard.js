@@ -3,14 +3,17 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import IconButton from '@material-ui/core/IconButton';
-import { DeleteOutlined } from "@material-ui/icons";
+import DeleteOutlined from "@material-ui/icons/DeleteOutlined";
 import SaveIcon from '@material-ui/icons/Save';
 import EditIcon from '@material-ui/icons/Edit';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Avatar from '@material-ui/core/Avatar';
-import { green, pink, yellow, blue } from "@material-ui/core/colors";
+import green from "@material-ui/core/colors/green";
+import pink from "@material-ui/core/colors/pink";
+import yellow from "@material-ui/core/colors/yellow";
+import blue from "@material-ui/core/colors/blue";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -119,7 +122,10 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
                 />
                 {
                     hasEditingStarted ?
-                        <div>
+                        <motion.div
+                            animate={{ scaleY: [0, 1] }}
+                            transition={{ ease: "easeOut", type: "spring", stiffness: 150 }}
+                        >
                             <TextField
                                 className={classes.editTextField}
                                 onChange={(e) => onEditTextFieldChange(e.target.value)}
@@ -128,14 +134,19 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
                                 rows={10}
                                 defaultValue={noteDetailsForEdit}
                             />
-                            <Button
-                                className={classes.saveBtn}
-                                variant="contained"
-                                endIcon={<SaveIcon />}
-                                onClick={() => onSaveClick(note.id)}
+                            <motion.div
+                                animate={{ rotate: [0, 1, -1, 1, -1, 1, -1, 1, -1, 0] }}
+                                transition={{ delay: 10.5, ease: "easeOut", duration: 3.9 }}
                             >
-                                Save
-                            </Button>
+                                <Button
+                                    className={classes.saveBtn}
+                                    variant="contained"
+                                    endIcon={<SaveIcon />}
+                                    onClick={() => onSaveClick(note.id)}
+                                >
+                                    Save
+                                </Button>
+                            </motion.div>
                             <Button
                                 className={classes.closeBtn}
                                 variant="contained"
@@ -144,7 +155,7 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
                             >
                                 Close
                             </Button>
-                        </div>
+                        </motion.div>
                         :
                         <CardContent>
                             <Typography variant="body2" color="textSecondary">{!editedNotes ? note.details : editedNotes}</Typography>

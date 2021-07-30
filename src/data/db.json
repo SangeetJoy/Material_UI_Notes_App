@@ -2,13 +2,13 @@
   "notes": [
     {
       "title": "Put all papers in the bike",
-      "details": "put all the papers. in bike test test. test jhghgmhg",
+      "details": "jfjgfjgfjgfjgfg",
       "category": "todos",
       "id": 2
     },
     {
       "title": "Deposit Money",
-      "details": "electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets ",
+      "details": "uyugjghjgjhgjh",
       "category": "money",
       "id": 3
     },
@@ -20,7 +20,7 @@
     },
     {
       "title": "Wake up early",
-      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "details": "jghgjhgjhgjhgjhgjh",
       "category": "reminders",
       "id": 5
     },
@@ -125,6 +125,18 @@
       "details": "hi",
       "category": "reminders",
       "id": 24
+    },
+    {
+      "title": "fjf",
+      "details": "ghg",
+      "category": "reminders",
+      "id": 25
+    },
+    {
+      "title": "test",
+      "details": "test",
+      "category": "money",
+      "id": 26
     }
   ]
 }
