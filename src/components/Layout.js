@@ -10,7 +10,8 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Switch from '@material-ui/core/Switch'
-import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
+import AddCircleOutlineOutlined from '@material-ui/icons/AddCircleOutlineOutlined'
+import SubjectOutlined from '@material-ui/icons/SubjectOutlined'
 import { useHistory, useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import Avatar from '@material-ui/core/Avatar'
@@ -95,7 +96,7 @@ export default function Layout(props) {
                             <Typography color="textSecondary">
                                 Joy
                             </Typography>
-                            <Avatar variant="circle" src="/myavatar.png" style={{ width: "56px", height: "58px" }} />
+                            <Avatar variant="circular" src="/myavatar.png" style={{ width: "56px", height: "58px" }} />
                         </div>
                     </Toolbar>
                 </AppBar>
@@ -114,8 +115,9 @@ export default function Layout(props) {
 
                 <List>
                     {
-                        menuItems.map(item => (
+                        menuItems.map((item, index) => (
                             <ListItem
+                                key={index}
                                 button
                                 onClick={() => history.push(item.path)}
                                 className={location.pathname === item.path ? classes.active : null}
