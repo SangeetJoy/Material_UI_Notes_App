@@ -1,7 +1,7 @@
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button';
 import React, { useState } from 'react'
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
@@ -71,6 +71,7 @@ export default function Create() {
           className={classes.field}
           variant="outlined"
           label="Note Title"
+          autoFocus
           fullWidth
           required
           error={titleError}

@@ -3,7 +3,7 @@ import Notes from './components/Notes'
 import Create from './components/Create'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import Layout from './components/Layout'
-import { Paper } from '@material-ui/core'
+import Paper from '@material-ui/core/Paper'
 import { useState } from 'react'
 
 function App() {
