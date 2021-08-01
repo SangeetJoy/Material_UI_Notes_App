@@ -1,142 +1,64 @@
 {
   "notes": [
     {
-      "title": "Put all papers in the bike",
-      "details": "jfjgfjgfjgfjgfg",
+      "title": "Apply for Leave Request",
+      "details": "need to travel inter state for some emergency govt work. hence need to apply for leave in office",
+      "category": "work",
+      "id": 1
+    },
+    {
+      "title": "Water the plants",
+      "details": "create a schedule for your plants as some of them are dying due to less care",
       "category": "todos",
       "id": 2
     },
     {
-      "title": "Deposit Money",
-      "details": "uyugjghjgjhgjh",
-      "category": "money",
+      "title": "Go to bank",
+      "details": "need to go with father for some important bank work. keep the documents ready.",
+      "category": "reminders",
       "id": 3
     },
     {
-      "title": "Complete the training videos",
-      "details": "test testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "work",
+      "title": "Deposit Money",
+      "details": "take money from your mother and deposit in her bank account",
+      "category": "money",
       "id": 4
     },
     {
-      "title": "Wake up early",
-      "details": "jghgjhgjhgjhgjhgjh",
+      "title": "Take family for your lunch",
+      "details": "take your family for lunch coming sunday as it has been a pending activity for a long time now",
       "category": "reminders",
       "id": 5
     },
     {
-      "title": "Take your girlfriend out for lunch",
-      "details": "i love her so much i love her so much i love her so much i love her so much i love her so much i love her so muchi love her so muchi love her so muchi love her so muchi love her so muchi love her so muchi love her so much",
-      "category": "todos",
+      "title": "withdraw money",
+      "details": "with draw money from the bank as it is needed",
+      "category": "money",
       "id": 6
     },
     {
-      "title": "Withdraw money",
-      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
-      "category": "money",
+      "title": "Buy eggs",
+      "details": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop ",
+      "category": "work",
       "id": 7
     },
     {
-      "title": "Eat juice ",
-      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
-      "category": "reminders",
+      "title": "take your pet out",
+      "details": "s and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by acci",
+      "category": "money",
       "id": 8
     },
     {
-      "title": "Revoke the the leave request",
-      "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrais simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra",
+      "title": "walking",
+      "details": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissan",
       "category": "work",
       "id": 9
     },
     {
-      "title": "Take dad to bank",
-      "details": "need to take dad to UBI to deposit money and return as soon as possible testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "money",
-      "id": 11
-    },
-    {
-      "title": "super cool",
-      "details": "xvtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super testtest i am test i am super cool and super test",
-      "category": "money",
-      "id": 13
-    },
-    {
-      "title": "testing",
-      "details": "",
+      "title": "buy fridge",
+      "details": "go to store and but fridge coming week.",
       "category": "work",
-      "id": 14
-    },
-    {
-      "title": "bgjh",
-      "details": "bvjhgj testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "money",
-      "id": 15
-    },
-    {
-      "title": "bkgkgkgkhgkgkgkhgk",
-      "details": " testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "work",
-      "id": 16
-    },
-    {
-      "title": "joy",
-      "details": " testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "money",
-      "id": 17
-    },
-    {
-      "title": "test",
-      "details": " testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "money",
-      "id": 18
-    },
-    {
-      "title": "tses",
-      "details": "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestt testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my esttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest",
-      "category": "work",
-      "id": 19
-    },
-    {
-      "title": "testtesttesttest",
-      "details": "testtesttesttesttesttestte testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my sttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest",
-      "category": "reminders",
-      "id": 20
-    },
-    {
-      "title": "testtesttesttest",
-      "details": " testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "work",
-      "id": 21
-    },
-    {
-      "title": "testtesttesttest",
-      "details": " testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ",
-      "category": "work",
-      "id": 22
-    },
-    {
-      "title": "testtesttesttest",
-      "details": "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttes testing is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my psassion buttesting is my ttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest",
-      "category": "money",
-      "id": 23
-    },
-    {
-      "title": "hi",
-      "details": "hi",
-      "category": "reminders",
-      "id": 24
-    },
-    {
-      "title": "fjf",
-      "details": "ghg",
-      "category": "reminders",
-      "id": 25
-    },
-    {
-      "title": "test",
-      "details": "test",
-      "category": "money",
-      "id": 26
+      "id": 10
     }
   ]
 }
