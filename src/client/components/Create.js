@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Container from '@material-ui/core/Container';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -12,17 +11,10 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import { useHistory } from 'react-router';
 import { motion } from "framer-motion"
-
-const useStyles = makeStyles({
-  field: {
-    marginTop: 20,
-    marginBottom: 20,
-    display: "block"
-  }
-});
+import { useCreateStyles } from '../styles/CreateStyle';
 
 export default function Create() {
-  const classes = useStyles()
+  const classes = useCreateStyles()
   const history = useHistory()
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");

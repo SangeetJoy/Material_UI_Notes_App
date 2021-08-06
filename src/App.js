@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Notes from './components/Notes'
-import Create from './components/Create'
+import Notes from './client/components/Notes'
+import Create from './client/components/Create'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
-import Layout from './components/Layout'
+import Layout from './client/components/Layout'
 import Paper from '@material-ui/core/Paper'
 import { useState } from 'react'
 

@@ -6,60 +6,18 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteOutlined from "@material-ui/icons/DeleteOutlined";
 import SaveIcon from '@material-ui/icons/Save';
 import EditIcon from '@material-ui/icons/Edit';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Avatar from '@material-ui/core/Avatar';
-import green from "@material-ui/core/colors/green";
-import pink from "@material-ui/core/colors/pink";
-import yellow from "@material-ui/core/colors/yellow";
-import blue from "@material-ui/core/colors/blue";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { motion } from "framer-motion"
-
-const useStyles = makeStyles({
-    avatar: {
-        backgroundColor: (note) => {
-            if (note.category === "work") { return yellow[700] }
-            if (note.category === "money") { return green[500] }
-            if (note.category === "todos") { return pink[500] }
-            return blue[500]
-        }
-    },
-    editTextField: {
-        padding: "1rem",
-        width: "90%",
-    },
-    saveBtn: {
-        backgroundColor: "#689f38",
-        padding: "3px",
-        width: "90%",
-        marginLeft: "4%",
-        marginBottom: "4%",
-        "&:hover": {
-            backgroundColor: "#99d066"
-        }
-    },
-    closeBtn: {
-        padding: "3px",
-        width: "90%",
-        marginLeft: "4%",
-        marginBottom: "4%",
-        backgroundColor: pink[500],
-        "&:hover": {
-            backgroundColor: pink[400]
-        }
-    },
-    editBtn: {
-        marginRight: "-10px"
-    }
-})
+import { useNodeCardStyles } from "../styles/NoteCardStyle";
 
 export default function NoteCard({ note, onDeleteButtonClick }) {
 
-    const classes = useStyles(note)
+    const classes = useNodeCardStyles(note)
 
     const [hasEditingStarted, setHasEditingStarted] = useState(false)
     const [noteDetailsForEdit, setNoteDetailsForEdit] = useState("")

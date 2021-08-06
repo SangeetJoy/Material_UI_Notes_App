@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Drawer from '@material-ui/core/Drawer'
@@ -15,60 +14,12 @@ import SubjectOutlined from '@material-ui/icons/SubjectOutlined'
 import { useHistory, useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import Avatar from '@material-ui/core/Avatar'
-
-const drawerWidth = "15%";
-
+import { useLayoutStyle } from '../styles/LayoutStyle';
 
 
 export default function Layout(props) {
     const { darkMode, onDarkModeChange } = props
-    const useStyles = makeStyles((theme) => {
-        return {
-            page: {
-                width: "100%",
-                padding: theme.spacing(3)
-            },
-            createPage: {
-                width: "100%",
-                padding: theme.spacing(3),
-                height: "95vh"
-            },
-            drawer: {
-                width: drawerWidth
-            },
-            drawerPaper: {
-                width: drawerWidth,
-                height: "100%"
-            },
-            drawerContainer: {
-                display: "flex"
-            },
-            active: {
-                background: darkMode ? "#6d6d6d" : "#eeeeee",
-                fontFamily: "helvatica"
-            },
-            title: {
-                padding: theme.spacing(2)
-            },
-            appbar: {
-                width: `calc(100% - ${drawerWidth})`,
-                backgroundColor: darkMode ? "#484848" : "#f9f9f9",
-                color: "black"
-            },
-            toolbar: theme.mixins.toolbar,
-            dateContainer: {
-                flexGrow: 1
-            },
-            avatarContainer: {
-                display: "flex",
-                alignItems: "center"
-            },
-            toggleBtn: {
-                backgroundColor: "white"
-            }
-        }
-    })
-    const classes = useStyles()
+    const classes = useLayoutStyle(darkMode)()
     const history = useHistory()
     const location = useLocation()
     const menuItems = [
@@ -129,16 +80,10 @@ export default function Layout(props) {
                     }
                 </List>
             </Drawer>
-            {location.pathname === "/create" ?
-                <div className={classes.createPage}>
-                    <div className={classes.toolbar}></div>
-                    {props.children.props.children[1]}
-                </div> :
-                <div className={classes.page}>
-                    <div className={classes.toolbar}></div>
-                    {props.children.props.children[0]}
-                </div>
-            }
+            <div className={classes.page}>
+                <div className={classes.toolbar}></div>
+                {props.children}
+            </div>
         </div>
     )
 }
