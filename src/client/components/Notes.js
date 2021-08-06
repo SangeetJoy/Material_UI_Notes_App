@@ -2,45 +2,13 @@ import Container from '@material-ui/core/Container';
 import React, { useEffect, useState } from 'react'
 import NoteCard from './NoteCard';
 import Masonry from 'react-masonry-css';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
-
-const useStyles = makeStyles((theme) => ({
-  myMasonryGrid: {
-    display: "flex",
-    marginLeft: "-30px",
-    width: "auto"
-  },
-  myMasonryGridColumn: {
-    paddingLeft: "30px",
-    backgroundClip: "padding-box"
-  },
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #ffff',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    textAlign: "center",
-    borderRadius: "19px"
-  },
-  deleteBtn: {
-    marginTop: "15px"
-  },
-  progressBar: {
-    marginBottom: "15px"
-  }
-}))
-
+import { useNoteStyle } from '../styles/NoteStyle';
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);
@@ -48,20 +16,20 @@ export default function Notes() {
   const [deleteId, setDeleteId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const classes = useStyles()
+  const classes = useNoteStyle()
 
-  useEffect(() => {
-    setIsLoading(true)
-    fetch('http://localhost:8000/notes')
-      .then(res => res.json())
-      .then(data => {
-        setNotes(data)
-        setIsLoading(false)
-      })
-      .catch(err => {
-        console.log(err);
-        setIsLoading(true)
-      })
+  useEffect(async () => {
+    setIsLoading(true);
+    try {
+      const res = await fetch('http://localhost:8000/notes')
+      const data = await res.json()
+      setNotes(data)
+      setIsLoading(false)
+    }
+    catch (err) {
+      console.log(err);
+      setIsLoading(true)
+    }
   }, [])
 
   const handleClose = () => {
@@ -115,8 +83,8 @@ export default function Notes() {
           </div>
         </Fade>
       </Modal >
-      {isLoading && <LinearProgress className={classes.progressBar} /> }
-      <Masonry
+      {isLoading && <LinearProgress className={classes.progressBar} />}
+      {Boolean(notes.length) && <Masonry
         breakpointCols={3}
         className={classes.myMasonryGrid}
         columnClassName={classes.myMasonryGridColumn}
@@ -129,7 +97,7 @@ export default function Notes() {
             />
           </div>
         ))}
-      </Masonry>
+      </Masonry>}
     </Container>
   )
 }
