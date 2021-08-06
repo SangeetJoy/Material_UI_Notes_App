@@ -12,6 +12,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import { useHistory } from 'react-router';
 import { motion } from "framer-motion"
 import { useCreateStyles } from '../styles/CreateStyle';
+import firebase from '../../server/firebase';
 
 export default function Create() {
   const classes = useCreateStyles()
@@ -36,11 +37,16 @@ export default function Create() {
     }
 
     if (title && details) {
-      fetch('http://localhost:8000/notes', {
-        method: 'POST',
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({ title, details, category })
-      }).then(() => history.push('/'))
+      try {
+      //POST call to firebase
+      const notesRef = firebase.database().ref("notes")
+      const body = { title, details, category}
+      notesRef.push(body);
+      history.push('/')
+      }
+      catch(err) {
+        console.log(err);
+      }
     }
   }
 

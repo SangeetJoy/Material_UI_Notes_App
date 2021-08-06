@@ -9,6 +9,7 @@ import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { useNoteStyle } from '../styles/NoteStyle';
+import firebase from '../../server/firebase';
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);
@@ -21,10 +22,21 @@ export default function Notes() {
   useEffect(async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/notes')
-      const data = await res.json()
-      setNotes(data)
-      setIsLoading(false)
+      //GET call
+      const notesRef = firebase.database().ref("notes");
+      notesRef.on("value", (snapshot) => {
+        if (snapshot.val()) {
+          const notesObject = snapshot.val()
+          const notesList = Object.entries(notesObject).map(([key, value]) => {
+            return { id: key, ...value }
+          })
+          setNotes(notesList)
+          setIsLoading(false)
+        }
+        else {
+          setIsLoading(true)
+        }
+      })
     }
     catch (err) {
       console.log(err);
@@ -38,20 +50,28 @@ export default function Notes() {
 
   const onDeleteButtonClick = async (id) => {
 
+    console.log({ id });
+
     setDeleteId(id)
     setIsModalOpen(true)
 
   }
 
   const handleDelete = async () => {
-    await fetch('http://localhost:8000/notes/' + deleteId, {
-      method: "DELETE"
-    })
+    try {
+      //DELETE Call
+      const notesRef = firebase.database().ref("notes").child(deleteId)
+      notesRef.remove()
 
-    const newNotes = notes.filter(note => note.id != deleteId)
-    setNotes(newNotes)
+      const newNotes = notes.filter(note => note.id != deleteId)
+      setNotes(newNotes)
 
-    setIsModalOpen(false)
+      setIsModalOpen(false)
+    }
+    catch (err) {
+      setIsModalOpen(false)
+      console.log(err);
+    }
   }
 
   return (
