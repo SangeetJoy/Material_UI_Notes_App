@@ -18,6 +18,7 @@ import { useLayoutStyle } from '../styles/LayoutStyle';
 import Hidden from "@material-ui/core/Hidden";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
+import CalendarTodaySharpIcon from '@material-ui/icons/CalendarTodaySharp';
 
 
 export default function Layout(props) {
@@ -91,7 +92,7 @@ export default function Layout(props) {
                             className={location.pathname === item.path ? classes.active : null}
                         >
                             <ListItemIcon>{item.icon}</ListItemIcon>
-                            <ListItemText className={classes.sideBarText} primary={item.text} />
+                            <ListItemText primary={item.text} />
                         </ListItem>
                     ))
                 }

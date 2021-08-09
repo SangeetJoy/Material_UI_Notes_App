@@ -11,7 +11,7 @@ export const useLayoutStyle = (darkMode) => {
                 [theme.breakpoints.down('sm')]: {
                     padding: "none",
                     marginTop: "1.5rem",
-                  },
+                },
             },
             createPage: {
                 width: "100%",
@@ -27,11 +27,11 @@ export const useLayoutStyle = (darkMode) => {
                 [theme.breakpoints.down('sm')]: {
                     display: "flex",
                     justifyContent: "center",
-                    padding: "1.5rem"
-                  }, 
+                    width: "60%"
+                },
             },
             ListItemIconContainer: {
-              fontSize: "2rem"
+                fontSize: "2rem"
             },
             drawerContainer: {
                 display: "flex",
@@ -46,39 +46,33 @@ export const useLayoutStyle = (darkMode) => {
             appbar: {
                 [theme.breakpoints.down('sm')]: {
                     width: "100%",
-                  },
+                },
                 width: `calc(100% - ${drawerWidth})`,
                 backgroundColor: darkMode ? "#484848" : "#f9f9f9",
                 color: "black"
             },
-            sideBarText: {
-                [theme.breakpoints.down('sm')]: {
-                    display: "none",
-                  },
-                  marginBottom: "1rem"
-            },
             sideBarMainText: {
                 [theme.breakpoints.down('sm')]: {
                     display: "none",
-                  },  
+                },
             },
             toolbar: theme.mixins.toolbar,
             dateContainer: {
                 flexGrow: 1
-            },
+             },
             avatarContainer: {
                 display: "flex",
                 alignItems: "center"
-            },
-            toggleBtn: {
-                backgroundColor: "white"
-            },
-            menuButton: {
-                marginRight: theme.spacing(2),
+        },
+        toggleBtn: {
+            backgroundColor: "white"
+        },
+        menuButton: {
+            marginRight: theme.spacing(2),
                 [theme.breakpoints.up("sm")]: {
-                  display: "none"
-                }
-              }
+                display: "none"
+            }
         }
+    }
     })
 }
