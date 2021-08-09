@@ -32,7 +32,6 @@ export default function Layout(props) {
     };
     const onListItemClick = (item, isMobileDrawer) => {
         history.push(item.path)
-        console.log({isMobileDrawer});
         isMobileDrawer && setMobileOpen(!mobileOpen);
     }
 
