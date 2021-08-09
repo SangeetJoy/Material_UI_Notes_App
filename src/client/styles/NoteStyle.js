@@ -8,7 +8,16 @@ export const useNoteStyle = makeStyles((theme) => ({
     },
     myMasonryGridColumn: {
       paddingLeft: "30px",
-      backgroundClip: "padding-box"
+      backgroundClip: "padding-box",
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: "0"
+      },
+    },
+    notesContainer: {
+      [theme.breakpoints.down('sm')]: {
+        paddingRight: "0",
+        boxSizing: "content-box"
+      },
     },
     modal: {
       display: 'flex',

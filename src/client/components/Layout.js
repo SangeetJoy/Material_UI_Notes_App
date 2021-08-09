@@ -30,6 +30,10 @@ export default function Layout(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    const onListItemClick = (item) => {
+        history.push(item.path)
+        setMobileOpen(!mobileOpen);
+    }
 
     const menuItems = [
         {
@@ -83,7 +87,7 @@ export default function Layout(props) {
                         <ListItem
                             key={index}
                             button
-                            onClick={() => history.push(item.path)}
+                            onClick={() => onListItemClick(item)}
                             className={location.pathname === item.path ? classes.active : null}
                         >
                             <ListItemIcon>{item.icon}</ListItemIcon>
@@ -95,7 +99,7 @@ export default function Layout(props) {
         </>
     )
 
-    const generateDrawerMarkup = (drawerMarkup) => {
+    const generateDrawerMarkup = () => {
         return (
             <Hidden xsDown implementation="css" className={classes.drawer}>
                 <Drawer
@@ -133,8 +137,8 @@ export default function Layout(props) {
     return (
         <div className={classes.drawerContainer}>
             <Paper>{appBarMarkUp}</Paper>
-            {generateDrawerMarkup(drawerMarkup)}
-            {generateMobileDrawerMarkup(drawerMarkup)}
+            {generateDrawerMarkup()}
+            {generateMobileDrawerMarkup()}
             <div className={classes.page}>
                 <div className={classes.toolbar}></div>
                 {props.children}

@@ -7,7 +7,11 @@ export const useLayoutStyle = (darkMode) => {
             page: {
                 width: "100%",
                 padding: theme.spacing(3),
-                minHeight: 'calc(100vh - 40px)'
+                minHeight: 'calc(100vh - 40px)',
+                [theme.breakpoints.down('sm')]: {
+                    padding: "none",
+                    marginTop: "1.5rem",
+                  },
             },
             createPage: {
                 width: "100%",
@@ -20,9 +24,17 @@ export const useLayoutStyle = (darkMode) => {
             drawerPaper: {
                 width: drawerWidth,
                 height: "100%",
+                [theme.breakpoints.down('sm')]: {
+                    display: "flex",
+                    justifyContent: "center",
+                    padding: "1.5rem"
+                  }, 
+            },
+            ListItemIconContainer: {
+              fontSize: "2rem"
             },
             drawerContainer: {
-                display: "flex"
+                display: "flex",
             },
             active: {
                 background: darkMode ? "#6d6d6d" : "#eeeeee",

@@ -83,7 +83,7 @@ export default function Notes() {
   }
 
   return (
-    <Container>
+    <Container className={classes.notesContainer}>
       < Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
