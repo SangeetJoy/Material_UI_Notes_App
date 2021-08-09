@@ -16,7 +16,9 @@ You'll also need to install Material UI as a dependency. To do this run **npm in
 
 **App screenshot**
 
-![image](https://user-images.githubusercontent.com/46918492/127044954-997ef757-889e-4bf9-8a65-f82af6030b52.png)
+![image](https://user-images.githubusercontent.com/46918492/128691393-79023325-70f2-4ffe-8e51-8033c006919f.png)
 
-![image](https://user-images.githubusercontent.com/46918492/127044992-004b2f86-62c5-464b-9027-d22a63f91fbf.png)
+
+![image](https://user-images.githubusercontent.com/46918492/128691347-cbee7fb7-d757-4192-83de-6e8a0ac98e9d.png)
+
 
