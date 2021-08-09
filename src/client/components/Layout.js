@@ -30,9 +30,10 @@ export default function Layout(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    const onListItemClick = (item) => {
+    const onListItemClick = (item, isMobileDrawer) => {
         history.push(item.path)
-        setMobileOpen(!mobileOpen);
+        console.log({isMobileDrawer});
+        isMobileDrawer && setMobileOpen(!mobileOpen);
     }
 
     const menuItems = [
@@ -74,7 +75,7 @@ export default function Layout(props) {
         </AppBar>
     )
 
-    const drawerMarkup = (
+    const drawerMarkup = (isMobileDrawer=false) => (
         <>
             <div className={classes.title}>
                 <Typography className={classes.sideBarMainText} variant="h5">
@@ -87,7 +88,7 @@ export default function Layout(props) {
                         <ListItem
                             key={index}
                             button
-                            onClick={() => onListItemClick(item)}
+                            onClick={() => onListItemClick(item, isMobileDrawer)}
                             className={location.pathname === item.path ? classes.active : null}
                         >
                             <ListItemIcon>{item.icon}</ListItemIcon>
@@ -107,7 +108,7 @@ export default function Layout(props) {
                     anchor="left"
                     classes={{ paper: classes.drawerPaper }}
                 >
-                    {drawerMarkup}
+                    {drawerMarkup()}
                 </Drawer>
             </Hidden>
         )
@@ -128,7 +129,7 @@ export default function Layout(props) {
                         keepMounted: true // Better open performance on mobile.
                     }}
                 >
-                    {drawerMarkup}
+                    {drawerMarkup(mobileOpen)}
                 </Drawer>
             </Hidden>
         )
