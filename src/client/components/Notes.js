@@ -11,6 +11,14 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import { useNoteStyle } from '../styles/NoteStyle';
 import firebase from '../../server/firebase';
 
+
+const breakpointColumnsObj = {
+  default: 3,
+  1100: 2,
+  700: 2,
+  500: 1
+};
+
 export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -105,7 +113,7 @@ export default function Notes() {
       </Modal >
       {isLoading && <LinearProgress className={classes.progressBar} />}
       {Boolean(notes.length) && <Masonry
-        breakpointCols={3}
+        breakpointCols={breakpointColumnsObj}
         className={classes.myMasonryGrid}
         columnClassName={classes.myMasonryGridColumn}
       >

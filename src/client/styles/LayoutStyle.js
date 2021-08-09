@@ -15,26 +15,40 @@ export const useLayoutStyle = (darkMode) => {
                 height: "95vh"
             },
             drawer: {
-                width: drawerWidth
+                width: drawerWidth,
             },
             drawerPaper: {
                 width: drawerWidth,
-                height: "100%"
+                height: "100%",
             },
             drawerContainer: {
                 display: "flex"
             },
             active: {
                 background: darkMode ? "#6d6d6d" : "#eeeeee",
-                fontFamily: "helvatica"
+                fontFamily: "helvatica",
             },
             title: {
                 padding: theme.spacing(2)
             },
             appbar: {
+                [theme.breakpoints.down('sm')]: {
+                    width: "100%",
+                  },
                 width: `calc(100% - ${drawerWidth})`,
                 backgroundColor: darkMode ? "#484848" : "#f9f9f9",
                 color: "black"
+            },
+            sideBarText: {
+                [theme.breakpoints.down('sm')]: {
+                    display: "none",
+                  },
+                  marginBottom: "1rem"
+            },
+            sideBarMainText: {
+                [theme.breakpoints.down('sm')]: {
+                    display: "none",
+                  },  
             },
             toolbar: theme.mixins.toolbar,
             dateContainer: {
@@ -46,7 +60,13 @@ export const useLayoutStyle = (darkMode) => {
             },
             toggleBtn: {
                 backgroundColor: "white"
-            }
+            },
+            menuButton: {
+                marginRight: theme.spacing(2),
+                [theme.breakpoints.up("sm")]: {
+                  display: "none"
+                }
+              }
         }
     })
 }
