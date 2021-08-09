@@ -28,7 +28,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Paper>
-          <Layout darkMode={darkMode} onDarkModeChange={onDarkModeChange}>
+          <Layout darkMode={darkMode} onDarkModeChange={onDarkModeChange} theme={theme}>
             <Switch>
               <Route exact path="/">
                 <Notes />
