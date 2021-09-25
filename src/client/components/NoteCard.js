@@ -14,7 +14,8 @@ import Button from '@material-ui/core/Button';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { motion } from "framer-motion"
 import { useNodeCardStyles } from "../styles/NoteCardStyle";
-import firebase from "firebase";
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 export default function NoteCard({ note, onDeleteButtonClick }) {
 
@@ -36,7 +37,7 @@ export default function NoteCard({ note, onDeleteButtonClick }) {
     const onSaveClick = async (noteId) => {
         try {
             //PUT call
-            const notesRef = firebase.database().ref("notes").child(noteId)
+            const notesRef = firebase.database().ref("Notes").child(noteId)
             notesRef.update({
                 details: editedNotes
             })

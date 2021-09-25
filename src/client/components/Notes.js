@@ -31,7 +31,7 @@ export default function Notes() {
     setIsLoading(true);
     try {
       //GET call
-      const notesRef = firebase.database().ref("notes");
+      const notesRef = firebase.database().ref("Notes");
       notesRef.on("value", (snapshot) => {
         if (snapshot.val()) {
           const notesObject = snapshot.val()
@@ -68,7 +68,7 @@ export default function Notes() {
   const handleDelete = async () => {
     try {
       //DELETE Call
-      const notesRef = firebase.database().ref("notes").child(deleteId)
+      const notesRef = firebase.database().ref("Notes").child(deleteId)
       notesRef.remove()
 
       const newNotes = notes.filter(note => note.id != deleteId)

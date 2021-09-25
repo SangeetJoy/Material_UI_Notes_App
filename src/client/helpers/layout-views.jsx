@@ -100,7 +100,7 @@ export const generateWebDrawerMarkup = ({ classes, onListItemClick, location }) 
 }
 
 export const generateMobileDrawerMarkup = ({ classes, handleDrawerToggle, location, theme, mobileOpen, onListItemClick }) => {
-    console.log({ location, theme, mobileOpen });
+
     return (
         <Hidden smUp implementation="css">
             <Drawer

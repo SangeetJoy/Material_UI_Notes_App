@@ -32,7 +32,7 @@ export default function Create() {
     if (title && details) {
       try {
         //POST call to firebase
-        const notesRef = firebase.database().ref("notes")
+        const notesRef = firebase.database().ref("Notes")
         const body = { title, details, category }
         notesRef.push(body);
         history.push('/')
