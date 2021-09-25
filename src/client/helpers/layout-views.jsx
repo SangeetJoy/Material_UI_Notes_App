@@ -3,6 +3,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Drawer from '@material-ui/core/Drawer'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 import React from "react"
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -16,6 +17,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Hidden from "@material-ui/core/Hidden";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
+import {Link} from "react-router-dom"
 
 const menuItems = [
     {
@@ -55,7 +57,7 @@ export const drawerMarkup = ({ classes, onListItemClick, location, mobileOpen = 
     </>
 )
 
-export const generateAppBarMarkUp = ({ classes, handleDrawerToggle, darkMode, onDarkModeChange }) => {
+export const generateAppBarMarkUp = ({ classes, handleDrawerToggle, darkMode, onDarkModeChange, onLogInButtonClick }) => {
     return (
         <Paper>
             <AppBar className={classes.appbar} elevation={0}>
@@ -73,12 +75,13 @@ export const generateAppBarMarkUp = ({ classes, handleDrawerToggle, darkMode, on
                     <Typography color="textSecondary" className={classes.dateContainer}>
                         Today is the {format(new Date(), "do MMMM Y")}
                     </Typography>
-                    <div className={classes.avatarContainer}>
+                    <Link to="/signup"><Button onClick={onLogInButtonClick}>Login</Button></Link>
+                    {/* <div className={classes.avatarContainer}>
                         <Typography color="textSecondary">
                             Joy
                         </Typography>
                         <Avatar variant="circular" src="/myavatar.png" style={{ width: "56px", height: "58px" }} />
-                    </div>
+                    </div> */}
                 </Toolbar>
             </AppBar>
         </Paper>
@@ -100,7 +103,6 @@ export const generateWebDrawerMarkup = ({ classes, onListItemClick, location }) 
 }
 
 export const generateMobileDrawerMarkup = ({ classes, handleDrawerToggle, location, theme, mobileOpen, onListItemClick }) => {
-    console.log({ location, theme, mobileOpen });
     return (
         <Hidden smUp implementation="css">
             <Drawer

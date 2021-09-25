@@ -38,7 +38,7 @@ export default function Create() {
         history.push('/')
       }
       catch (err) {
-        console.log(err);
+        console.log("err",err);
       }
     }
   }

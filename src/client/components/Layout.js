@@ -5,7 +5,7 @@ import { generateAppBarMarkUp, generateWebDrawerMarkup, generateMobileDrawerMark
 
 
 export default function Layout(props) {
-    const { darkMode, onDarkModeChange, theme } = props
+    const { darkMode, onDarkModeChange, theme, onLogInButtonClick } = props
     const classes = useLayoutStyle(darkMode)()
     const history = useHistory()
     const location = useLocation()
@@ -27,8 +27,8 @@ export default function Layout(props) {
     )
     return (
         <div className={classes.drawerContainer}>
-            {generateAppBarMarkUp({ classes, handleDrawerToggle, darkMode, onDarkModeChange })}
-            {generateWebDrawerMarkup({ classes, onListItemClick, location })}
+            {generateAppBarMarkUp({ classes, handleDrawerToggle, darkMode, onDarkModeChange, onLogInButtonClick  })}
+            {generateWebDrawerMarkup({ classes, onListItemClick, location})}
             {generateMobileDrawerMarkup({ classes, theme, location, handleDrawerToggle, mobileOpen, onListItemClick })}
             {pagesMarkup}
         </div>
